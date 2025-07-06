@@ -1,0 +1,16 @@
+name: CI test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 여기서 windows-latest, macos-latest로 바꿔도 됨
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Say Hello
+        run: echo "Hello, GitHub Actions!"
